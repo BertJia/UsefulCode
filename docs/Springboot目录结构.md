@@ -5,10 +5,12 @@
  顶级域名.公司.项目
 #### Application.java
 1. 启动类(Application.java)推荐放在根目录com.atticwind.demo包下
-#### domain
-2. 实体类(domain)
+#### entity
+2. 实体类(entity)
     A: com.atticwind.demo.domain(jpa项目)
     B: com.atticwind.demo.pojo(mybatis项目)
+    C: com.atticwind.demo.entity
+    entity 里的每一个字段，与数据库相对应，
 #### mapper
 3. 数据接口访问层(Dao)
     A: com.atticwind.demo.repository(jpa项目)
@@ -25,10 +27,13 @@
 8. 配置类(config)推荐：com.atticwind.demo.config
 #### dto
 9. 数据传输对象(dto)推荐：com.atticwind.demo.dto
-   数据传输对象(Data Transfer Object)用于封装多个实体类(domain)之间的关系，不破坏原有的实体类结构
+   数据传输对象(Data Transfer Object)用于封装多个实体类(entity)之间的关系，不破坏原有的实体类结构
+   DTO是用来转换从 entity 到 vo，或者从 vo 到 entity 的中间的东西 。
 #### vo 
 10. 视图包装对象(vo)推荐：com.atticwind.demo.vo
-    视图包装对象(View Object)用于封装客户端请求的数据，防止部分数据泄露(如：管理员ID)，保证数据安全，不破坏   原有的实体类结构
+    视图包装对象(View Object)用于封装客户端请求的数据，防止部分数据泄露(如：管理员ID)，保证数据安全，不破坏原有的实体类结构
+    VO里的每一个字段，是和你前台 html 页面相对应，
+
 ## resources
 二、资源目录结构
 ### application.properties
